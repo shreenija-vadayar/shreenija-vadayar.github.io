@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { allProjects } from '../../data/projects';
+const list = await allProjects();
+---
+<Base title="All projects" description="Every project in one place: engineering, creative technology, and design.">
+  <div class="wrap">
+    <section class="hero">
+      <h1>All projects</h1>
+      <p class="intro">Everything in one list. The Engineering and Design pages show the same work in a different order.</p>
+    </section>
+    <ul class="grid">{list.map((e) => <li><ProjectCard entry={e} /></li>)}</ul>
+  </div>
+</Base>

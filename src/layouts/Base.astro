@@ -1,0 +1,92 @@
+---
+import '@fontsource/instrument-serif/400.css';
+import '@fontsource/instrument-serif/400-italic.css';
+import '@fontsource-variable/instrument-sans';
+import '../styles/global.css';
+import { site, nav, url } from '../data/site';
+const { title, description = site.description, accent = 'both' } = Astro.props;
+const pageTitle = title ? `${title} | ${site.name}` : `${site.name} | Design Engineering & Creative Technology`;
+const norm = (p) => p.replace(/\/$/, '') || '/';
+const here = norm(Astro.url.pathname);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    {site.showPlaceholders && <meta name="robots" content="noindex" />}
+  </head>
+  <body data-accent={accent}>
+    <a class="skip" href="#main">Skip to content</a>
+    {site.showPlaceholders && (
+      <p class="draft-banner">Private draft: placeholders are visible. Set <code>showPlaceholders</code> to <code>false</code> in <code>src/data/site.ts</code> before launch.</p>
+    )}
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href={url()}>{site.name}</a>
+        <nav aria-label="Main">
+          <ul>
+            {nav.map((n) => (
+              <li><a href={url(n.href)} aria-current={norm(url(n.href)) === here ? 'page' : undefined}>{n.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>© {site.year} {site.name}</p>
+        <p><a href={`mailto:${site.email}`}>{site.email}</a> · <a href={site.linkedin}>LinkedIn</a></p>
+      </div>
+    </footer>
+    <dialog id="lightbox" aria-label="Image viewer">
+      <button type="button" class="lb-close" aria-label="Close image viewer">×</button>
+      <button type="button" class="lb-prev" aria-label="Previous image">‹</button>
+      <figure><img alt="" /><figcaption></figcaption></figure>
+      <button type="button" class="lb-next" aria-label="Next image">›</button>
+    </dialog>
+    <script>
+      const dlg = document.getElementById('lightbox');
+      if (dlg) {
+        const img = dlg.querySelector('img');
+        const cap = dlg.querySelector('figcaption');
+        let items = [];
+        let i = 0;
+        let opener = null;
+        const show = (n) => {
+          i = (n + items.length) % items.length;
+          const a = items[i];
+          img.src = a.href;
+          img.alt = a.dataset.alt || '';
+          cap.textContent = a.dataset.caption || '';
+          dlg.classList.toggle('single', items.length < 2);
+        };
+        document.addEventListener('click', (e) => {
+          const a = e.target.closest && e.target.closest('a[data-lightbox]');
+          if (!a) return;
+          e.preventDefault();
+          items = Array.from(document.querySelectorAll('a[data-lightbox]'));
+          opener = a;
+          show(items.indexOf(a));
+          dlg.showModal();
+        });
+        dlg.querySelector('.lb-close').addEventListener('click', () => dlg.close());
+        dlg.querySelector('.lb-prev').addEventListener('click', () => show(i - 1));
+        dlg.querySelector('.lb-next').addEventListener('click', () => show(i + 1));
+        dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+        dlg.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') show(i - 1);
+          if (e.key === 'ArrowRight') show(i + 1);
+        });
+        dlg.addEventListener('close', () => { img.removeAttribute('src'); if (opener) opener.focus(); });
+      }
+    </script>
+  </body>
+</html>

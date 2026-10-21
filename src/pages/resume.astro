@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import ResumeLinks from '../components/ResumeLinks.astro';
+import { site } from '../data/site';
+---
+<Base title="Resume" description="Download the technical or creative version of Shreenija Vadayar’s resume.">
+  <div class="wrap">
+    <section class="hero">
+      <h1>Resume</h1>
+      <p class="intro">Two versions of the same background, each focused on a different kind of role.</p>
+    </section>
+    <div class="two-col">
+      <section aria-labelledby="r1"><h2 id="r1">{site.resumes.technical.label}</h2><p>{site.resumes.technical.blurb}</p><ResumeLinks which="technical" /></section>
+      <section aria-labelledby="r2"><h2 id="r2">{site.resumes.creative.label}</h2><p>{site.resumes.creative.blurb}</p><ResumeLinks which="creative" /></section>
+    </div>
+  </div>
+</Base>

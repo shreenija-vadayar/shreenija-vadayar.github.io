@@ -1,0 +1,20 @@
+---
+import { site, url } from '../data/site';
+const { entry } = Astro.props;
+const d = entry.data;
+const hero = d.media?.hero;
+---
+<article class="card">
+  {hero ? (
+    <img class="thumb" src={url(`media/${hero.src}`)} alt={hero.alt} loading="lazy" />
+  ) : site.showPlaceholders ? (
+    <div class="thumb thumb-empty" aria-hidden="true"><span>Image to come</span></div>
+  ) : null}
+  <div class="card-body">
+    <p class="status">{d.status}</p>
+    <h3>{d.title}</h3>
+    <p>{d.summary}</p>
+    <ul class="tags">{d.tags.map((t) => <li>{t}</li>)}</ul>
+    <a class="card-link" href={url(`projects/${entry.id}/`)}>View Case Study<span class="sr-only">: {d.title}</span></a>
+  </div>
+</article>

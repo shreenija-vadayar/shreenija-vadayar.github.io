@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import Media from '../../components/Media.astro';
+import { visibleProjects, accentFor } from '../../data/projects';
+import { paths, url } from '../../data/site';
+
+export async function getStaticPaths() {
+  const all = await visibleProjects();
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const m = d.media ?? {};
+const s = d.slots ?? {};
+const accent = d.bridge ? 'both' : accentFor(d);
+---
+<Base title={d.title} description={d.summary} accent={accent}>
+  <div class="wrap">
+    <header class="proj-head">
+      <p class="proj-meta">{d.status} · {d.context}{d.dates ? ` · ${d.dates}` : ''}</p>
+      <h1>{d.title}</h1>
+      <p class="lead">{d.summary}</p>
+    </header>
+
+    <Media kind="hero" items={m.hero ? [m.hero] : []} note={s.hero} label="Hero image" />
+    <Media kind="demo" demo={m.demo} note={s.demo} label="Demo video or GIF" />
+
+    <div class="case">
+      {d.overview && (
+        <section aria-labelledby="overview"><h2 id="overview">Overview</h2><div class="body"><p>{d.overview}</p></div></section>
+      )}
+      {d.problem && (
+        <section aria-labelledby="problem"><h2 id="problem">Problem &amp; Intent</h2><div class="body"><p>{d.problem}</p></div></section>
+      )}
+      {d.role && (
+        <section aria-labelledby="role"><h2 id="role">My Role &amp; Process</h2><div class="body">
+          {d.role.map((t) => <p>{t}</p>)}
+          <Media kind="process" items={m.process ?? []} note={s.process} label="Process photos" />
+        </div></section>
+      )}
+      {d.technical && (
+        <section aria-labelledby="tech"><h2 id="tech">Technical Details</h2><div class="body">
+          <ul class="list">{d.technical.map((t) => <li>{t}</li>)}</ul>
+          <Media kind="technical" items={m.technical ?? []} note={s.technical} label="Diagram, CAD, or code" />
+        </div></section>
+      )}
+      {d.outcome && (
+        <section aria-labelledby="outcome"><h2 id="outcome">Outcome &amp; Next Steps</h2><div class="body">
+          {d.outcome.map((t) => <p>{t}</p>)}
+          <Media kind="extra" items={m.extra ?? []} note={s.extra} label="Additional images" />
+        </div></section>
+      )}
+    </div>
+
+    <p class="crumbs">
+      <a href={url('engineering/')}>{paths.engineering.title}</a>
+      <a href={url('design/')}>{paths.design.title}</a>
+      <a href={url('projects/')}>All projects</a>
+    </p>
+  </div>
+</Base>

@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Contact" description="Get in touch with Shreenija Vadayar.">
+  <div class="wrap">
+    <section class="hero">
+      <h1>Contact</h1>
+      <p class="lead">I’d like to hear about roles in product development, design engineering, manufacturing, and creative technology.</p>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+      <p><a href={site.linkedin}>LinkedIn profile</a></p>
+      {site.location && <p class="muted">{site.location}</p>}
+    </section>
+  </div>
+</Base>

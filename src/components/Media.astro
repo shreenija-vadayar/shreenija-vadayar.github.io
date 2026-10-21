@@ -1,0 +1,42 @@
+---
+// One media slot. Shows the files if any are listed; otherwise a labeled placeholder (draft mode only).
+import { site, url } from '../data/site';
+const { kind = 'gallery', items = [], demo, note, label } = Astro.props;
+const has = kind === 'demo' ? !!demo : items.length > 0;
+const m = (f) => url(`media/${f}`);
+---
+{has ? (
+  kind === 'demo' ? (
+    <figure class="media-demo">
+      <video controls preload="metadata" playsinline poster={demo.poster ? m(demo.poster) : undefined} aria-label={demo.alt}>
+        <source src={m(demo.src)} />
+        {demo.captions && <track kind="captions" src={m(demo.captions)} srclang="en" label="English" />}
+        <a href={m(demo.src)}>Download the video</a>
+      </video>
+    </figure>
+  ) : (
+    <div class={`gallery gallery-${kind}`}>
+      {items.map((i) => (
+        <figure class={i.wide ? 'wide' : undefined}>
+          {i.video ? (
+            <video controls preload="metadata" playsinline poster={i.poster ? m(i.poster) : undefined} aria-label={i.alt}>
+              <source src={m(i.video)} />
+              {i.captions && <track kind="captions" src={m(i.captions)} srclang="en" label="English" />}
+              <a href={m(i.video)}>Download the video</a>
+            </video>
+          ) : (
+            <a class="zoom" href={m(i.src)} data-lightbox data-alt={i.alt} data-caption={i.caption ?? ''} aria-label={`Enlarge image: ${i.alt}`}>
+              <img src={m(i.src)} alt={i.alt} loading={kind === 'hero' ? 'eager' : 'lazy'} />
+            </a>
+          )}
+          {i.caption && <figcaption>{i.caption}</figcaption>}
+        </figure>
+      ))}
+    </div>
+  )
+) : site.showPlaceholders && note ? (
+  <div class="placeholder" role="note">
+    <strong>{label}</strong>
+    <span>{note}</span>
+  </div>
+) : null}

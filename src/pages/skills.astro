@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { skills, credentials } from '../data/site';
+---
+<Base title="Skills & Credentials" description="Technical and creative skills, education, certifications, and awards.">
+  <div class="wrap">
+    <section class="hero"><h1>Skills &amp; Credentials</h1></section>
+    <div class="two-col">
+      <section aria-labelledby="skills-h">
+        <h2 id="skills-h">Skills</h2>
+        <dl class="skills">
+          {skills.map((g) => (<><dt>{g.group}</dt><dd>{g.items.join(', ')}</dd></>))}
+        </dl>
+      </section>
+      <section aria-labelledby="cred-h">
+        <h2 id="cred-h">Education, certifications &amp; awards</h2>
+        {credentials.map((c) => (<div class="cred"><h3>{c.title}</h3><p>{c.detail}</p></div>))}
+      </section>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from './ProjectCard.astro';
+import ResumeLinks from './ResumeLinks.astro';
+import { paths, url } from '../data/site';
+import { projectsFor } from '../data/projects';
+const { which } = Astro.props;
+const p = paths[which];
+const list = await projectsFor(which);
+---
+<Base title={p.title} description={p.blurb} accent={which}>
+  <div class="wrap">
+    <section class="hero">
+      <h1>{p.title}</h1>
+      <p class="tagline">{p.tagline}</p>
+      <p class="intro">{p.blurb}</p>
+      <ResumeLinks which={p.resume} />
+    </section>
+    <section class="block" aria-labelledby="proj">
+      <h2 id="proj" class="sr-only">Projects</h2>
+      <ul class="grid">
+        {list.map((e) => <li><ProjectCard entry={e} /></li>)}
+      </ul>
+      <p><a href={url('projects/')}>View all projects</a></p>
+    </section>
+  </div>
+</Base>

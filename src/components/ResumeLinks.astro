@@ -1,0 +1,16 @@
+---
+import { site, url } from '../data/site';
+const { which = 'both' } = Astro.props;
+const items = Object.entries(site.resumes).filter(([k]) => which === 'both' || k === which);
+---
+<ul class="resume-links">
+  {items.map(([, r]) => (
+    <li>
+      {r.ready ? (
+        <a class="btn" href={url(r.file)} download>{r.action}</a>
+      ) : site.showPlaceholders ? (
+        <span class="btn btn-off">{r.action} (PDF not added yet)</span>
+      ) : null}
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ResumeLinks from '../components/ResumeLinks.astro';
+import { site, paths, url } from '../data/site';
+import { visibleProjects } from '../data/projects';
+const all = await visibleProjects();
+const bridge = all.filter((p) => p.data.bridge);
+const featured = all.filter((p) => p.data.featured).slice(0, 4);
+---
+<Base>
+  <div class="wrap">
+    <section class="hero">
+      <h1>{site.name}</h1>
+      <p class="tagline">Design Engineering · Creative Technology · Product Development</p>
+      <p class="lead">I design, engineer, and build human-centered products and experiences.</p>
+      <p class="intro">My hands-on work spans CAD and physical prototyping, electronics and interactive systems, immersive environments, and visual storytelling. I bring technical problem-solving and creative thinking together to turn ideas into tangible experiences.</p>
+    </section>
+  </div>
+
+  <section class="paths" aria-label="Choose a path">
+    <div class="path eng">
+      <h2>{paths.engineering.title}</h2>
+      <p>{paths.engineering.blurb}</p>
+      <a class="btn" href={url('engineering/')}>View Work<span class="sr-only">: {paths.engineering.title}</span></a>
+    </div>
+    <div class="path des">
+      <h2>{paths.design.title}</h2>
+      <p>{paths.design.blurb}</p>
+      <a class="btn" href={url('design/')}>View Work<span class="sr-only">: {paths.design.title}</span></a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    {bridge.length > 0 && (
+      <section class="block" aria-labelledby="bridge">
+        <h2 id="bridge">Where the two paths meet</h2>
+        <p class="prose">Creative technology connects engineering and design. These projects appear in both paths.</p>
+        <ul class="grid">{bridge.map((e) => <li><ProjectCard entry={e} /></li>)}</ul>
+      </section>
+    )}
+
+    {featured.length > 0 && (
+      <section class="block" aria-labelledby="selected">
+        <h2 id="selected">Selected work</h2>
+        <ul class="grid">{featured.map((e) => <li><ProjectCard entry={e} /></li>)}</ul>
+        <p><a href={url('projects/')}>View all projects</a></p>
+      </section>
+    )}
+
+    <section class="block two-col" aria-label="About, resume, and contact">
+      <div>
+        <h2>About</h2>
+        <p>I’m a design engineer and creative technologist who builds things people can touch, wear, use, and experience, with hands-on experience from the university lab to a production floor.</p>
+        <p><a href={url('about/')}>Read more about me</a></p>
+      </div>
+      <div>
+        <h2>Resume</h2>
+        <p>Two versions, each focused on a different kind of role.</p>
+        <ResumeLinks />
+        <p><a href={url('resume/')}>About the resumes</a></p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>I’m looking for entry-level roles in product development, design engineering, manufacturing, and creative technology.</p>
+        <p><a href={url('contact/')}>Get in touch</a></p>
+      </div>
+    </section>
+  </div>
+</Base>
