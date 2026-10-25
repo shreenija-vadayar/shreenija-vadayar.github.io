@@ -31,7 +31,7 @@ slots:
   extra: "Expo photo; award evidence"
 media:
   hero:
-    src: "HeroImage.jpg"
+    src: "HeroImage.jpeg"
     alt: "Seven mechanical flowers mounted on a garment, shown on a mannequin"
   demo:
     src: "Flower Interaction.mp4"
