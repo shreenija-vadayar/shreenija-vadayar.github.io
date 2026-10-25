@@ -29,4 +29,11 @@ slots:
   process: "Sketches and moodboard; CAD and 3D-printed parts; mechanism detail"
   technical: "Wiring or circuit diagram; close-up of the electronics"
   extra: "Expo photo; award evidence"
+media:
+  hero:
+    src: "HeroImage.jpg"
+    alt: "Seven mechanical flowers mounted on a garment, shown on a mannequin"
+  demo:
+    src: "Flower Interaction.mp4"
+    alt: "Flower opening and closing when a person interacts with it"
 ---
