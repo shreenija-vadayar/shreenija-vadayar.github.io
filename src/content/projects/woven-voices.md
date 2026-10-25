@@ -31,7 +31,7 @@ slots:
   extra: "Expo photo; award evidence"
 media:
   hero:
-    src: "woven-voices-hero-2.jpeg"
+    src: "woven-voices-hero.jpeg"
     alt: "Seven mechanical flowers mounted on a garment, shown on a mannequin"
   demo:
     src: "flower-demo.mp4"
