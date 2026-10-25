@@ -133,4 +133,4 @@ dl.skills dd { margin: 0.2rem 0 0; color: var(--muted); }
 #lightbox.single .lb-prev, #lightbox.single .lb-next { visibility: hidden; }
 
 /* Videos inside galleries */
-.gallery video { width: 100%; height: auto; background: #000; }
+.gallery video { width: 150%; height: auto; background: #000; }
