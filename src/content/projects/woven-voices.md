@@ -34,7 +34,7 @@ media:
     src: "woven-voices-hero.jpeg"
     alt: "Seven mechanical flowers mounted on a garment, shown on a mannequin"
   demo:
-    src: "flower-interaction.mp4"
-    poster: "flower-interaction-poster.jpg"
+    src: "flower-demo.mp4"
+    poster: "flower-demo-poster.jpg"
     alt: "Flower opening and closing when a person interacts with it"
 ---
