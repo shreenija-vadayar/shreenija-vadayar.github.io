@@ -96,8 +96,8 @@ section.block { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .gallery-hero img { width: 100%; object-fit: cover; }
 figure { margin: 0; }
 figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 0.4rem; }
-.media-demo { margin-block: 1.25rem; max-width: 52rem !important; }
-.media-demo video { width: 100%; background: #000; }
+.media-demo { margin-block: 1.25rem; max-width: none !important; }
+.media-demo video { width: 100%; height: auto; background: #000; }
 .placeholder { border: 2px dashed var(--muted); padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: 0.2rem; color: var(--muted); margin-block: 1.25rem; max-width: none !important; }
 .placeholder strong { color: var(--ink); }
 .crumbs { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 3rem; }
