@@ -9,7 +9,7 @@ overview: "A conceptual roofing system using moss-tile forms to explore sustaina
 problem: "The concept explored whether a moss-based roofing approach could contribute to greener, cooler built environments."
 role:
   - "I contributed to the concept as a team member and used SketchUp and 3D printing to create a physical representation of the proposed tile."
-  - "I conducted market and sustainability research, developed UX/UI flows in Figma, and helped prepare website and pitch-presentation materials."
+  - "I conducted market and sustainability research and helped prepare website and pitch-presentation materials."
 technical:
   - "SketchUp modeling and 3D printing"
   - "Figma"
