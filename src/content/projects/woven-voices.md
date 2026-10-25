@@ -22,7 +22,7 @@ technical:
 outcome:
   - "I presented the installation at the 2025 CU Boulder Design Expo and engaged directly with more than 25 visitors."
   - "The lighting worked and all seven flowers functioned to some degree, but three achieved the full intended blooming and wilting motion."
-  - "Next steps would be more rigid stems, more reliable mounting and connections, and improved power distribution."
+  - "Next steps would be stronger stems with more flexibility, more reliable mounting and connections, and improved power distribution."
 slots:
   hero: "Hero image of the full installation (3:2 or 16:9)"
   demo: "20–30 second interaction demo (video or GIF, with a poster image)"
