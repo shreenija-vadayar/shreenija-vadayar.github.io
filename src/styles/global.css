@@ -117,7 +117,7 @@ dl.skills dd { margin: 0.2rem 0 0; color: var(--muted); }
 .gallery-process figure, .gallery-extra figure { break-inside: avoid; margin: 0 0 1rem; }
 .gallery figure.wide { column-span: all; grid-column: 1 / -1; }
 .gallery.gallery-technical { grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); }
-.zoom { display: block; cursor: zoom-in; }
+.zoom { width: 100%; height: auto; display: block; cursor: zoom-in; }
 
 /* Click-to-enlarge viewer */
 #lightbox { border: 0; padding: 0; background: transparent; width: 100vw; height: 100vh; max-width: 100vw; max-height: 100vh; color: #fff; }
