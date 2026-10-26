@@ -20,6 +20,9 @@ outcome:
   - "My findings helped inform fabrication and material choices for a final prototype prepared for a funding presentation."
   - "Next steps would include additional validation and refinement as the project progressed."
 slots:
-  process: "Photos of prototypes and materials; selected fabrication photos (no confidential or identifying research details)"
-  technical: "Comparison table; anonymized experimental charts; modeling screenshots"
+  hero: "Atlas Institute Logo"
+media:
+  hero:
+    src: "atlas-hero.png"
+    alt: "ATLAS Institute logo for hero image"
 ---
