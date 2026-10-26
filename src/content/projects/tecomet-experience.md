@@ -22,4 +22,10 @@ technical:
 outcome:
   - "I revised and maintained 50+ engineering documents, supporting 20–25+ parts orders and 2–3 concurrent workstreams."
   - "I contributed to the implementation of a revised production-lot size that substantially reduced defects, then monitored subsequent lots for about two weeks to help confirm the improvement was sustained."
+slots:
+  hero: "Hero image of the company logo"
+media:
+  hero:
+    src: "tecomet-hero.jpg"
+    alt: "Tecomet Company logo"
 ---
