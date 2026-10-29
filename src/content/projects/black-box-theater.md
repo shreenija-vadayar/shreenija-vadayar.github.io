@@ -21,4 +21,13 @@ outcome:
 slots:
   hero: "Photo of a production or the lighting setup"
   process: "Cue sheets, lighting plots, or setup photos"
+media:
+  hero:
+    src: "Blackbox-Hero.jpg"
+    alt: "B2 space logo as the Hero Image"
+  process:
+    - src: "Blackbox-Process1.jpg"
+      alt: "Interactive walkthrough experience setup in the blackbox theater"
+    - src: "Blackbox-Process2.jpg"
+      alt: "Show setup in the blackbox theater"
 ---
