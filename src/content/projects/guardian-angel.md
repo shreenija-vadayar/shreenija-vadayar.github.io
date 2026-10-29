@@ -21,4 +21,18 @@ slots:
   hero: "Wearable concept image"
   process: "Physical prototype photos, if available; electronics images"
   technical: "Figma screens; Bluetooth test evidence"
+media:
+  hero:
+    src: "GA-Hero.jpg"
+    alt: "Hero Image for Guardian Angel Project"
+  process:
+    - src: "GA-Process1.jpg"
+      alt: "The Button in Hand for Scale"
+    - src: "GA-Process2.jpg"
+      alt: "The Button worn as an earring and on a pair of pants"
+  technical:
+    - src: "GA-Tech1.jpg"
+      alt: "App start screen created on Figma"
+    - src: "GA-Tech2.jpg"
+      alt: "Electronics Testing in Progress"
 ---
