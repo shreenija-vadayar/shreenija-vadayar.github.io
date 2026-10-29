@@ -25,7 +25,7 @@ slots:
   extra: "Final layout"
 media:
   hero:
-    src: "CS-Hero.jpg"
+    src: "CS-HeroFinal.jpg"
     alt: "Hero Image for Colorado Symphony Project"
   process:
     - src: "CS-Process1.jpg"
