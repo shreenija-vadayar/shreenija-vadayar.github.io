@@ -31,6 +31,7 @@ media:
     alt: "Tailgating Project Title Card"
   demo:
     src: "TG-Demo.mp4"
+    poster: "TG-DemoPoster.jpg"
     alt: "Demo Video with Initial Electronics setup"
   process:
     - src: "TG-Process1.jpg"
