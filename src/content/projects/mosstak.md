@@ -21,4 +21,28 @@ slots:
   hero: "Photo of the 3D-printed tile"
   process: "SketchUp model; concept diagrams; Figma flows"
   technical: "Sustainability research graphics; pitch slides"
+media:
+  hero:
+    src: "MossTak-Hero.jpg"
+    alt: "Hero Image with logo for MossTak Project"
+  process:
+    - src: "MT-Process3.jpg"
+      alt: "Moss Roofing Slide"
+    - src: "MT-Process4.jpg"
+      alt: "Cost & Finances Slide"
+    - src: "MT-Process1.jpg"
+      alt: "Opportunity Slide"
+    - src: "MT-Process2.jpg"
+      alt: "Competitive Matrix Slide"
+  technical:
+    - src: "MT-Tech1.jpg"
+      alt: "Layer 1 of Moss Roofing Panel"
+    - src: "MT-Tech2.jpg"
+      alt: "Layer 2 of Moss Roofing Panel"
+    - src: "MT-Tech3.jpg"
+      alt: "Layer 3 of Moss Roofing Panel"
+    - src: "MT-Tech4.jpg"
+      alt: "Layer 4 of Moss Roofing Panel"
+    - src: "MT-Tech5.jpg"
+      alt: "Layer 5 of Moss Roofing Panel"
 ---
