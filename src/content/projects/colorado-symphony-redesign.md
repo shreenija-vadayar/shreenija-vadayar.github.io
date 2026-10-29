@@ -23,4 +23,24 @@ slots:
   hero: "Before and after flyer"
   process: "Visual references; design detail"
   extra: "Final layout"
+media:
+  hero:
+    src: "CS-Hero.jpg"
+    alt: "Hero Image for Colorado Symphony Project"
+  process:
+    - src: "CS-Process1.jpg"
+      alt: "Typography Exploration"
+    - src: "CS-Process2.jpg"
+      alt: "Color Exploration"
+    - src: "CS-Process3.jpg"
+      alt: "Color & Shape Exploration"
+    - src: "CS-Process4.jpg"
+      alt: "First Combo Exploration"
+    - src: "CS-Process5.jpg"
+      alt: "Final Combo Exploration"
+  extra:
+    - src: "CS-Outcome1.jpg"
+      alt: "Front Side of Poster"
+    - src: "CS-Outcome2.jpg"
+      alt: "Back of Poster"
 ---
