@@ -19,4 +19,19 @@ outcome:
 slots:
   hero: "Concept sketch or product diagram"
   process: "Research synthesis; competitor matrix; user insights"
+media:
+  hero:
+    src: "SoleMate_Hero.jpg"
+    alt: "Hero Image for SoleMate Project"
+  process:
+    - src: "SM-Process6.jpg"
+      alt: "Insertable Sole Breakdown"
+    - src: "SM-Process4.jpg"
+      alt: "Target Audience Breakdown"
+    - src: "SM-Process3.jpg"
+      alt: "Price Range Breakdown"
+    - src: "SM-Process2.jpg"
+      alt: "Revenue Forecast"
+    - src: "SM-Process5.jpg"
+      alt: "Competitive Matrix"
 ---
