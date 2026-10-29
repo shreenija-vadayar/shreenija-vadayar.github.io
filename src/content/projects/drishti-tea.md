@@ -19,4 +19,26 @@ slots:
   hero: "Final packaging mockup"
   process: "Moodboard; palette; logo and typography; design development"
   extra: "Final presentation"
+media:
+  hero:
+    src: "Drishti-Hero.png"
+    alt: "Hero Image for Drishti Tea Project"
+  process:
+    - src: "Drishti-Process1.jpg"
+      alt: "Design & Typography"
+    - src: "Drishti-Process2.jpg"
+      alt: "Color Palette"
+    - src: "Drishti-Process3.jpg"
+      alt: "Front & Side Label Panel"
+    - src: "Drishti-Process4.jpg"
+      alt: "Back & Side Label Panel"
+  extra:
+    - src: "Drishti-Outcome1.png"
+      alt: "Front of Packaging"
+    - src: "Drishti-Outcome2.png"
+      alt: "Side 1 of Packaging"
+    - src: "Drishti-Outcome3.png"
+      alt: "Back of Packaging"
+    - src: "Drishti-Outcome4.png"
+      alt: "Side 2 of Packaging"
 ---
