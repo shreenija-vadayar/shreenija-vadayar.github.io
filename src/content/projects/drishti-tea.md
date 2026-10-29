@@ -24,6 +24,8 @@ media:
     src: "Drishti-Hero.png"
     alt: "Hero Image for Drishti Tea Project"
   process:
+    - src: "Drishti-Process5.jpg"
+      alt: "Mood Board for Drishti Tea"
     - src: "Drishti-Process1.jpg"
       alt: "Design & Typography"
     - src: "Drishti-Process2.jpg"
