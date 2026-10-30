@@ -1,20 +1,27 @@
 ---
 title: "Art Direction & Creative Production"
-summary: "Fashion, editorial, dance, and cultural photography concepts directed from first idea through production."
+summary: "Fashion, editorial, dance, and cultural storytelling shaped through creative direction, visual development, and performance."
 status: "Independent Creative Practice"
 context: "2023 – Present"
 tags: ["Art Direction", "Photography", "Creative Production", "Editorial"]
 order: { design: 4 }
-overview: "I develop and direct fashion, editorial, dance, and cultural photography concepts from initial idea through production, using moodboards to set styling, location, color, composition, and mood across 10+ creative shoots."
+overview: "An ongoing creative practice exploring the intersection of fashion, visual storytelling, dance, and cultural identity. I develop and bring creative concepts to life across photography and performance, using visual direction, choreography, and collaborative production to explore representation, inclusion, and creative expression."
 role:
-  - "I lead creative production: sourcing and styling looks, coordinating photographers, models, and collaborators, managing schedules and locations, developing shot concepts, and directing on-set execution."
-  - "I was Creative Director and model for a culturally informed 1990s-inspired editorial, developing the concept, coordinating the models and photographer, selecting the location, contributing to styling, and directing the visual narrative around cultural identity and cross-cultural expression."
+  - "I develop and direct creative concepts from initial idea through execution, taking on both creative leadership and collaborative roles depending on the project."
+  - "For photography, this includes concept development, moodboarding, styling, sourcing collaborators, coordinating photographers and models, location scouting, and directing visual execution. I also participate as a model in many of my own projects, bringing both creative and on-camera perspectives to the process."
+  - "For dance, I develop original choreography, coordinate music and audio mixes, direct group performances, and oversee costume concepts and sourcing. My experience spans university dance team productions, independent solo work, and collaborative group projects."
 technical:
-  - "Moodboards and visual direction"
-  - "Styling, location scouting, and scheduling"
-  - "Team coordination on set"
+  - "Creative concept development and visual research"
+  - "Mood boards, art direction, and styling"
+  - "Photography production and on-set direction"
+  - "Modeling and collaborative creative production"
+  - "Choreography and performance direction"
+  - "Music selection and audio mix development"
+  - "Costume conceptualization and sourcing"
+  - "Team coordination and visual storytelling"
 outcome:
-  - "The 1990s-inspired editorial was published in BLAZE Magazine in October 2023."
+  - "My creative work spans 10+ photography shoots and multiple dance and performance projects, including a culturally informed, 1990s-inspired editorial published in BLAZE Magazine in October 2023."
+  - "Moving forward, I aim to continue expanding my creative direction practice across fashion, editorial photography, dance, and multidisciplinary storytelling, exploring new ways to bring cultural narratives and creative expression to life."
 slots:
   hero: "Best image from the BLAZE Magazine editorial"
   process: "Moodboards; behind-the-scenes photos"
