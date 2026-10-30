@@ -23,4 +23,22 @@ slots:
   demo: "Short headset demo recording"
   process: "Interaction screenshots; palette and color wheel"
   extra: "Examples of drawings on virtual surfaces"
+media:
+  hero:
+    src: "VR-Hero.jpeg"
+    alt: "Opening image of VR Environment"
+  demo:
+    src: "VR-Demo.mp4"
+    poster: "VR-DemoPoster.jpeg"
+    alt: "Short Video of Drawing with Poster Image"
+  process:
+    - src: "VR-Process1.jpeg"
+      alt: "Color Wheel Purple"
+    - src: "VR-Process2.jpeg"
+      alt: "Color Wheel selection with drawing on mannequin"
+  extra:
+    - src: "VR-Outcome1.jpeg"
+      alt: "Drawing on Mannequin"
+    - src: "VR-Outcome2.jpeg"
+      alt: "Heart Drawing"
 ---
