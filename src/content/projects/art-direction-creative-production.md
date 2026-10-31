@@ -26,4 +26,26 @@ slots:
   hero: "Best image from the BLAZE Magazine editorial"
   process: "Moodboards; behind-the-scenes photos"
   extra: "Selected frames from other shoots"
+media:
+  hero:
+    src: "AD-Hero.jpeg"
+    alt: "Magazine Spread for BLAZE 90s shoot"
+  process:
+    - src: "AD-Process1.jpg"
+      alt: "Zodiac Shoot Mood board"
+    - src: "AD-Process2.jpeg"
+      alt: "90s Shoot Mood Board"
+    - src: "AD-Process3.jpeg"
+      alt: "Nature Goddess Shoot Mood Board"
+    - src: "AD-Process4.jpeg"
+      alt: "Dance Choreography BTS"
+    - src: "AD-Process5.jpeg"
+      alt: "90s Shoot BTS"
+  extra:
+    - src: "AD-Outcome1.jpeg"
+      alt: "Swing Magazine Spread"
+    - src: "AD-Outcome2.jpeg"
+      alt: "Blaze Magazine Spread"
+    - src: "AD-Outcome3.jpeg"
+      alt: "Dance Graduation Photoshoot"
 ---
