@@ -22,4 +22,22 @@ slots:
   hero: "Photo of a finished garment (3:2 or 4:5)"
   process: "Sketches, pattern work, fittings, before and after of upcycled pieces"
   extra: "Additional finished looks"
+media:
+  hero:
+    src: "Upcycling-Hero.jpg"
+    alt: "Hero Image for Upcycling Project"
+  process:
+    - src: "Upcycling-Process1.jpg"
+      alt: "Sewing shot 1"
+    - src: "Upcycling-Process2.jpg"
+      alt: "Sewing shot 2"
+    - src: "Upcycling-Process3.jpg"
+      alt: "Sewing Chalk Shot"
+    - src: "UpcyclingProcess4.jpg"
+      alt: "Sewing Seam Ripping shot"
+  extra:
+    - src: "Upcycling-Outcome1.jpg"
+      alt: "Front of finished skirt"
+    - src: "Upcycling-Outcome2.jpg"
+      alt: "Back of finished skirt"
 ---
