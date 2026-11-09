@@ -11,7 +11,7 @@ export const site = {
 
   // true  = private draft: empty media slots are shown as labeled boxes, hidden projects appear, search engines are told not to index.
   // false = public site: empty slots and hidden projects disappear.
-  showPlaceholders: true,
+  showPlaceholders: false,
 
   // Resume PDFs: put the files in public/resumes/, then set ready: true.
   resumes: {
